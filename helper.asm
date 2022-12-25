@@ -1,42 +1,15 @@
-//for automatization example, remove if see
-@{}
+//show picture on the screen
+@pic_pixelToDraw
+A=M
+M=0
+@result_ccW_t_Int
 D=M
-@num1Big_div
-M=D
-@{}
-D=M
-@num1Smal_div
-M=D
-@{}
-D=M
-@num2Big_div
-M=D
-@{}
-D=M
-@num2Smal_div
-M=D
-@{}
-D=A
-@returner_div
-M=D
-@bigDiv
-0;JMP
-({})
-//example end
-
-@vecB_lbInter_X_Int
-D=M
-@lbInter_vecBpos
-M=D
-@vecC_lbInter_X_Int
-D=M
-@lbInter_pointCpos
-M=D
-@vecM_lbInter_X_Int
-D=M
-@lbInter_pointMpos
-M=D
-@vecN_lbInter_X_Int
-D=M
-@lbInter_vecNpos
-M=D
+@pic_skipPixel
+D;JLT
+@pic_pixelToDraw
+A=M
+M=-1
+(pic_skipPixel)
+@pic_pixelToDraw
+M=M+1
+//end of pictureDrawing

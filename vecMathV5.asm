@@ -1,38 +1,31 @@
 //place here variabels that needs to be monitored
-@result_scP
+@pic_floorGap
+@pic_wallClock
 
-@resultInt_lbInter
-@resultFrac_lbInter
 
-@pointToCheck_X_Int
-@pointToCheck_X_Frac
-@pointToCheck_Y_Int
-@pointToCheck_Y_Frac
+@result_ccW_t_Int
+@result_ccW_t_Frac
+@result_ccW_type
+
+@vecB_ccW_X_Int
+@vecC_ccW_X_Int
+@returner_ccW
+
+
+@pic_Beam_X_Int
+@pic_Beam_X_Frac
+@pic_Beam_Y_Int
+@pic_Beam_Y_Frac
 
 @P_X_Int
 @P_X_Frac
 @P_Y_Int
 @P_Y_Frac
 
-@N_X_Int
-@N_X_Frac
-@N_Y_Int
-@N_Y_Frac
-
-@M_X_Int
-@M_X_Frac
-@M_Y_Int
-@M_Y_Frac
-
 @C_X_Int
 @C_X_Frac
 @C_Y_Int
 @C_Y_Frac
-
-@H_X_Int
-@H_X_Frac
-@H_Y_Int
-@H_Y_Frac
 
 //calling the initializer
 //do not touch please - useful thing
@@ -44,206 +37,15 @@ M=D
 0;JMP
 (backFromArrayInitializer)
 
-//example
 
-@1
-D=A
-@P_X_Int
-M=D
-@0
-D=A
-@P_X_Frac
-M=D
-@2
-D=A
-@P_Y_Int
-M=D
-@0
-D=A
-@P_Y_Frac
-M=D
-
-@1
-D=A
-@N_X_Int
-M=D
-@0
-D=A
-@N_X_Frac
-M=D
-@4
-D=-A
-@N_Y_Int
-M=D
-@0
-D=A
-@N_Y_Frac
-M=D
-
-@13
-D=A
-@M_X_Int
-M=D
-@0
-D=A
-@M_X_Frac
-M=D
-@8
-D=A
-@M_Y_Int
-M=D
-@0
-D=A
-@M_Y_Frac
-M=D
-
-@4
-D=A
-@C_X_Int
-M=D
-@0
-D=A
-@C_X_Frac
-M=D
-@1
-D=A
-@C_Y_Int
-M=D
-@0
-D=A
-@C_Y_Frac
-M=D
-
-
-
-
-
-
-
-@P_X_Int//call lbInter
-D=A
-@vecB_lbInter_X_Int
-M=D
-
-@N_X_Int
-D=A
-@vecN_lbInter_X_Int
-M=D
-
-@M_X_Int
-D=A
-@vecM_lbInter_X_Int
-M=D
-
-@C_X_Int
-D=A
-@vecC_lbInter_X_Int
-M=D
-
-
-@example_backFromLbInter1
-D=A
-@returner_lbInter
-M=D
-@lineBeamIntersection
+//maincycle starter
+@gameStartPos
 0;JMP
-(example_backFromLbInter1)
+//maincycle starter
 
 
 
 
-@1
-D=A
-@H_X_Int
-M=D
-@0
-D=A
-@H_X_Frac
-M=D
-@5
-D=A
-@H_Y_Int
-M=D
-@0
-D=A
-@H_Y_Frac
-M=D
-
-
-//mult p
-@P_X_Int
-D=A
-@vec_vecNumMult_X_Int
-M=D
-@resultInt_lbInter
-D=M
-@numInt_vecNumMult
-M=D
-@resultFrac_lbInter
-D=M
-@numFrac_vecNumMult
-M=D
-@pointToCheck_X_Int
-D=A
-@vecResult_vecNumMult_X_Int
-M=D
-@example_backFromVecNumMult1
-D=A
-@returner_vecNumMult
-M=D
-@vecNumMult
-0;JMP
-(example_backFromVecNumMult1)
-
-
-//summing with C
-@C_X_Int
-D=A
-@vec1_sum_X_Int
-M=D
-@pointToCheck_X_Int
-D=A
-@vec2_sum_X_Int
-M=D
-@pointToCheck_X_Int
-D=A
-@vecResult_sum_X_Int
-M=D
-@example_backFromVecSum1
-D=A
-@returner_vecSum
-M=D
-@vecSum
-0;JMP
-(example_backFromVecSum1)
-
-
-//call scP
-@pointToCheck_X_Int
-D=A
-@vecP_scP_X_Int
-M=D
-@M_X_Int
-D=A
-@vecM_scP_X_Int
-M=D
-@H_X_Int
-D=A
-@vecH_scP_X_Int
-M=D
-@example_backFromScP1
-D=A
-@returner_scP
-M=D
-@segmentContainsPoint
-0;JMP
-(example_backFromScP1)
-
-(END)
-@END
-0;JMP
-
-//example
 
 
 
@@ -373,10 +175,1019 @@ D=M+D
 @scP_vec2_Y_Frac
 
 
+//segmentArray here
+@2
+D=A
+@segmentArrayLength
+M=D
+//segment1
+@1
+D=A
+@seg1_vecN_X_Int
+M=D
+@0
+D=A
+@seg1_vecN_X_Frac
+M=D
+@4
+D=-A
+@seg1_vecN_Y_Int
+M=D
+@0
+D=A
+@seg1_vecN_Y_Frac
+M=D
+@1
+D=A
+@seg1_vecM_X_Int
+M=D
+@0
+D=A
+@seg1_vecM_X_Frac
+M=D
+@5
+D=A
+@seg1_vecM_Y_Int
+M=D
+@0
+D=A
+@seg1_vecM_Y_Frac
+M=D
+@9
+D=A
+@seg1_vecH_X_Int
+M=D
+@0
+D=A
+@seg1_vecH_X_Frac
+M=D
+@7
+D=A
+@seg1_vecH_Y_Int
+M=D
+@0
+D=A
+@seg1_vecH_Y_Frac
+M=D
+@0
+D=A
+@seg1_type
+M=D
+//segment2
+@4
+D=A
+@seg2_vecN_X_Int
+M=D
+@0
+D=A
+@seg2_vecN_X_Frac
+M=D
+@1
+D=-A
+@seg2_vecN_Y_Int
+M=D
+@0
+D=A
+@seg2_vecN_Y_Frac
+M=D
+@3
+D=-A
+@seg2_vecM_X_Int
+M=D
+@0
+D=A
+@seg2_vecM_X_Frac
+M=D
+@3
+D=A
+@seg2_vecM_Y_Int
+M=D
+@0
+D=A
+@seg2_vecM_Y_Frac
+M=D
+@4
+D=-A
+@seg2_vecH_X_Int
+M=D
+@0
+D=A
+@seg2_vecH_X_Frac
+M=D
+@1
+D=-A
+@seg2_vecH_Y_Int
+M=D
+@0
+D=A
+@seg2_vecH_Y_Frac
+M=D
+@1
+D=A
+@seg2_type
+M=D
+//segmentArrayEnd
+
+
+//beamArrayStart
+//beam 1
+@0
+D=A
+@beam1_X_Int
+M=D
+@0
+D=A
+@beam1_X_Frac
+M=D
+@21
+D=A
+@beam1_Y_Int
+M=D
+@0
+D=A
+@beam1_Y_Frac
+M=D
+//beam 2
+@9
+D=A
+@beam2_X_Int
+M=D
+@0
+D=A
+@beam2_X_Frac
+M=D
+@18
+D=A
+@beam2_Y_Int
+M=D
+@0
+D=A
+@beam2_Y_Frac
+M=D
+//beam 3
+@18
+D=A
+@beam3_X_Int
+M=D
+@0
+D=A
+@beam3_X_Frac
+M=D
+@9
+D=A
+@beam3_Y_Int
+M=D
+@0
+D=A
+@beam3_Y_Frac
+M=D
+//beam 4
+@21
+D=A
+@beam4_X_Int
+M=D
+@0
+D=A
+@beam4_X_Frac
+M=D
+@0
+D=A
+@beam4_Y_Int
+M=D
+@0
+D=A
+@beam4_Y_Frac
+M=D
+//beam 5
+@18
+D=A
+@beam5_X_Int
+M=D
+@0
+D=A
+@beam5_X_Frac
+M=D
+@9
+D=-A
+@beam5_Y_Int
+M=D
+@0
+D=A
+@beam5_Y_Frac
+M=D
+//beam 6
+@9
+D=A
+@beam6_X_Int
+M=D
+@0
+D=A
+@beam6_X_Frac
+M=D
+@18
+D=-A
+@beam6_Y_Int
+M=D
+@0
+D=A
+@beam6_Y_Frac
+M=D
+//beam 7
+@0
+D=A
+@beam7_X_Int
+M=D
+@0
+D=A
+@beam7_X_Frac
+M=D
+@21
+D=-A
+@beam7_Y_Int
+M=D
+@0
+D=A
+@beam7_Y_Frac
+M=D
+//beam 8
+@9
+D=-A
+@beam8_X_Int
+M=D
+@0
+D=A
+@beam8_X_Frac
+M=D
+@18
+D=-A
+@beam8_Y_Int
+M=D
+@0
+D=A
+@beam8_Y_Frac
+M=D
+//beam 9
+@18
+D=-A
+@beam9_X_Int
+M=D
+@0
+D=A
+@beam9_X_Frac
+M=D
+@9
+D=-A
+@beam9_Y_Int
+M=D
+@0
+D=A
+@beam9_Y_Frac
+M=D
+//beam 10
+@21
+D=-A
+@beam10_X_Int
+M=D
+@0
+D=A
+@beam10_X_Frac
+M=D
+@0
+D=A
+@beam10_Y_Int
+M=D
+@0
+D=A
+@beam10_Y_Frac
+M=D
+//beam 11
+@18
+D=-A
+@beam11_X_Int
+M=D
+@0
+D=A
+@beam11_X_Frac
+M=D
+@9
+D=A
+@beam11_Y_Int
+M=D
+@0
+D=A
+@beam11_Y_Frac
+M=D
+//beam 12
+@9
+D=-A
+@beam12_X_Int
+M=D
+@0
+D=A
+@beam12_X_Frac
+M=D
+@18
+D=A
+@beam12_Y_Int
+M=D
+@0
+D=A
+@beam12_Y_Frac
+M=D
+//beamArrayEnd
+
+
+
+//visualisation methods things here
+//computeClosestWallInfo
+@ccW_InterPoint_X_Int
+@ccW_InterPoint_X_Frac
+@ccW_InterPoint_Y_Int
+@ccW_InterPoint_Y_Frac
+//computePicture
+@pic_Beam_X_Int
+@pic_Beam_X_Frac
+@pic_Beam_Y_Int
+@pic_Beam_Y_Frac
+@pic_helpVec_X_Int
+@pic_helpVec_X_Frac
+@pic_helpVec_Y_Int
+@pic_helpVec_Y_Frac
+
+
+
+
+
+//settings
+@20000
+D=A
+@ccW_visibleDistanceT
+M=D
+
+//constants
+@64
+D=A
+@pixelCount
+M=D
+@100
+D=A
+@viewMainBeamLength
+M=D
+@SCREEN
+D=A
+@firstPixel
+M=D
+@8191
+D=D+A
+@lastPixel
+M=D
+@100
+D=A
+@floorGapConstant
+M=D
+
+@pixelCount//count viewMainBeamMultiplyer_Int and frac
+D=M
+@num2Smal_divF
+M=-D
+@num2Big_divF
+M=0
+@num1Int_divF
+M=1
+M=M+1
+@num1Frac_divF
+M=0
+@init_backFromDivF1
+D=A
+@returner_divFloat
+M=D
+@floatDiv
+0;JMP
+(init_backFromDivF1)
+@resultInt_divF
+D=M
+@viewMainBeamMultiplyer_Int
+M=D
+@resultFrac_divF
+D=M
+@viewMainBeamMultiplyer_Frac
+M=D
 
 @returner_init
 A=M
 0;JMP
+
+
+
+//jump here to start the process
+(gameStartPos)
+@mainCamera_X_Int
+M=0
+@mainCamera_X_Frac
+M=0
+@mainCamera_Y_Int
+M=0
+@mainCamera_Y_Frac
+M=0
+//set mainBeamPointer
+@beam1_X_Int
+D=A
+@mainBeamPointer
+M=D
+//show initial image
+@mainBeamPointer
+D=M
+@vecV_pic_X_Int
+M=D
+@mainCamera_X_Int
+D=A
+@vecC_pic_X_Int
+M=D
+@mainGameCycle
+D=A
+@returner_pic
+M=D
+@computePicture
+0;JMP
+//here all process-management takes place
+(mainGameCycle)
+
+
+
+
+
+
+
+@mainGameCycle
+0;JMP
+
+
+
+
+
+
+
+
+//gets 'vecV_pic_X_Int' as vec of view-line of character
+//gets 'vecC_pic_X_Int' as point of Camera: "start Of Beam"
+//place to return after the program is 'returner_pic'
+//results in nothing but screen
+(computePicture)
+//initialize the starting pixel
+@SCREEN
+D=A
+@4096
+D=D+A
+@pic_pixelToDrawFrom
+M=D
+@255
+D=A
+@pic_RegMask
+M=D
+//calculate the helping vector
+//operate on Y
+@2
+D=A
+@vecV_pic_X_Int
+A=M+D
+D=M
+@num2Int_minus
+M=D
+@3
+D=A
+@vecV_pic_X_Int
+A=M+D
+D=M
+@num2Frac_minus
+M=D
+@num1Int_minus
+M=0
+@num1Frac_minus
+M=0
+@pic_backFromMinus1
+D=A
+@returner_minus
+M=D
+@floatMinus
+0;JMP
+(pic_backFromMinus1)
+@resultInt_minus
+D=M
+@pic_helpVec_X_Int
+M=D
+@resultFrac_minus
+D=M
+@pic_helpVec_X_Frac
+M=D
+//operating on X
+@vecV_pic_X_Int
+A=M
+D=M
+@pic_helpVec_Y_Int
+M=D
+@vecV_pic_X_Int
+A=M+1
+D=M
+@pic_helpVec_Y_Frac
+M=D
+//getting the leftMost beam
+@pic_helpVec_X_Int
+D=A
+@vec1_sum_X_Int
+M=D
+@vecV_pic_X_Int
+D=M
+@vec2_sum_X_Int
+M=D
+@pic_Beam_X_Int
+D=A
+@vecResult_sum_X_Int
+M=D
+@pic_backFromVecSum1
+D=A
+@returner_vecSum
+M=D
+@vecSum
+0;JMP
+(pic_backFromVecSum1)
+//multiplying helpVec on multiplyer to get really help vector
+@pic_helpVec_X_Int
+D=A
+@vec_vecNumMult_X_Int
+M=D
+@viewMainBeamMultiplyer_Int
+D=M
+@numInt_vecNumMult
+M=D
+@viewMainBeamMultiplyer_Frac
+D=M
+@numFrac_vecNumMult
+M=D
+@pic_helpVec_X_Int
+D=A
+@vecResult_vecNumMult_X_Int
+M=D
+@pic_backFromVecNumMult1
+D=A
+@returner_vecNumMult
+M=D
+@vecNumMult
+0;JMP
+(pic_backFromVecNumMult1)
+//here leftMost Beam and helpVec are ready
+@pixelCount
+D=M
+@pic_iterCount
+M=D
+(pic_mainCycle)//start of main cycle
+@pic_iterCount
+M=M-1
+//step
+//computing ClosestWallInfo here
+@pic_Beam_X_Int
+D=A
+@vecB_ccW_X_Int
+M=D
+@vecC_pic_X_Int
+D=M
+@vecC_ccW_X_Int
+M=D
+@pic_backFromCcW1
+D=A
+@returner_ccW
+M=D
+@computeClosestWallInfo
+0;JMP
+(pic_backFromCcW1)
+//show picture on the screen
+//calculate wall heigth
+@300
+D=A
+@pic_floorGap
+M=D
+@result_ccW_t_Int
+D=M
+@pic_nextStepOfDrawing
+D;JLT
+@floorGapConstant
+D=M
+@num1Int_multF
+M=D
+@num1Frac_divF
+M=0
+@result_ccW_t_Int
+D=M
+@num2Int_multF
+M=D
+@result_ccW_t_Frac
+D=M
+@num2Frac_multF
+M=D
+@pic_backFromMultF1
+D=A
+@returner_multFloat
+M=D
+@floatMult
+0;JMP
+(pic_backFromMultF1)
+@resultInt_multF
+D=M
+@pic_floorGap
+M=D
+(pic_nextStepOfDrawing)
+//set pic_wallClock
+@128
+D=A
+@pic_wallClock
+M=D
+//choose wall color
+@21845//slim strips = 0
+D=A
+@pic_WallColor
+M=D
+@result_ccW_type
+D=M
+@pic_afterWallColorChoise
+D;JEQ
+@3855//wide strips = 1
+D=A
+@pic_WallColor
+M=D
+@result_ccW_type
+D=M
+@pic_afterWallColorChoise
+D;JGT
+@pic_WallColor//white = -1
+M=0
+(pic_afterWallColorChoise)
+//there could be choise from type of the wall
+@pic_RegMask//use mask
+D=M
+@pic_WallColor//use mask
+M=D&M
+@pic_ClearMask//use mask
+M=!D
+@pic_pixelToDrawFrom
+D=M
+@pic_CurrentPixel
+M=D
+(pic_upDrawCycle)//upDraw
+//checkCondition
+@firstPixel
+D=M
+@pic_CurrentPixel
+D=M-D
+@pic_upDrawCycleEnd
+D;JLT
+//here if ok
+@pic_ClearMask//clearing space
+D=M
+@pic_CurrentPixel
+A=M
+M=M&D
+//decide if it is wall or ceiling/floor/air
+@pic_wallClock
+MD=M-1
+@pic_floorGap
+D=D-M
+@pic_drawNotWallUp
+D;JLE
+//drawWall
+@pic_WallColor
+D=M
+@pic_CurrentPixel
+A=M
+M=M|D
+@pic_upDrawCycle_continue
+0;JMP
+(pic_drawNotWallUp)//now the air/floor/ceiling is black
+@pic_RegMask
+D=M
+@pic_CurrentPixel
+A=M
+M=M|D
+//do something here if need notWall of other color
+(pic_upDrawCycle_continue)
+@32
+D=A
+@pic_CurrentPixel//increase current pixel
+M=M-D
+@pic_upDrawCycle
+0;JMP
+(pic_upDrawCycleEnd)//end
+//draw down now
+@pic_pixelToDrawFrom//set pic_CurrentPixel
+D=M
+@pic_CurrentPixel
+M=D
+//set pic_wallClock again
+@128
+D=A
+@pic_wallClock
+M=D
+(pic_downDrawCycle)
+//checkCondition
+@lastPixel
+D=M
+@pic_CurrentPixel
+D=D-M
+@pic_downDrawCycleEnd
+D;JLT
+//decide if it is wall or ceiling/floor/air
+@pic_wallClock
+MD=M-1
+@pic_floorGap
+D=D-M
+@pic_drawNotWallDown
+D;JLE
+//drawWall
+@pic_WallColor
+D=M
+@pic_CurrentPixel
+A=M
+M=M|D
+@pic_downDrawCycle_continue
+0;JMP
+(pic_drawNotWallDown)//now the air/floor/ceiling is black
+@pic_RegMask
+D=M
+@pic_CurrentPixel
+A=M
+M=M|D
+//do something here if need notWall of other color
+(pic_downDrawCycle_continue)
+@32
+D=A
+@pic_CurrentPixel//increase current pixel
+M=M+D
+@pic_downDrawCycle
+0;JMP
+(pic_downDrawCycleEnd)
+@pic_RegMask//change mask
+M=!M
+@pic_RegMask//move starting pixel if needed
+D=M
+@pic_endOfDrawing
+D;JLE
+@pic_pixelToDrawFrom
+M=M+1
+(pic_endOfDrawing)
+//end of pictureDrawing
+//add helpVec to Beam
+@pic_Beam_X_Int
+D=A
+@vec1_sum_X_Int
+M=D
+@pic_helpVec_X_Int
+D=A
+@vec2_sum_X_Int
+M=D
+@pic_Beam_X_Int
+D=A
+@vecResult_sum_X_Int
+M=D
+@pic_backFromVecSum2
+D=A
+@returner_vecSum
+M=D
+@vecSum
+0;JMP
+(pic_backFromVecSum2)
+//step end
+@pic_iterCount//check the condition
+D=M
+@pic_mainCycle
+D;JGT
+//end of main cycle
+//return to origin
+@returner_pic
+A=M
+0;JMP
+
+
+
+
+
+
+
+
+
+//gets 'vecB_ccW_X_Int' as vector of the Beam
+//gets 'vecC_ccW_X_Int' as point of Camera: "start of Beam"
+//results in 'result_ccW_t_Int' and 'result_ccW_t_Frac' and
+//and in 'result_ccW_type'
+//result_ccW_t_Int < 0 means that no wall was hit
+//place to return after the program is 'returner_ccW'
+(computeClosestWallInfo)
+@32767
+D=A
+@result_ccW_t_Int
+M=D
+@result_ccW_t_Frac
+M=0
+//compute actually
+@seg1_vecN_X_Int
+D=A
+@ccW_wallPointer
+M=D
+@segmentArrayLength
+D=M
+@ccW_iterCount
+M=D
+(ccW_mainCycle)//cycle start
+@ccW_iterCount
+M=M-1
+//step
+//compute intersection point
+//computing t
+@vecB_ccW_X_Int
+D=M
+@vecB_lbInter_X_Int
+M=D
+@vecC_ccW_X_Int
+D=M
+@vecC_lbInter_X_Int
+M=D
+@ccW_wallPointer
+D=M
+@vecN_lbInter_X_Int
+M=D
+@4
+D=A
+@ccW_wallPointer
+MD=M+D
+@vecM_lbInter_X_Int
+M=D
+@ccW_backFromLbInter1
+D=A
+@returner_lbInter
+M=D
+@lineBeamIntersection
+0;JMP
+(ccW_backFromLbInter1)
+@resultInt_lbInter   //dismiss wall if t < 0
+D=M
+@ccW_mainCycle_continue1
+D;JLT
+//computing intersection point if t >= 0
+@vecB_ccW_X_Int
+D=M
+@vec_vecNumMult_X_Int
+M=D
+@resultInt_lbInter
+D=M
+@numInt_vecNumMult
+M=D
+@resultFrac_lbInter
+D=M
+@numFrac_vecNumMult
+M=D
+@ccW_InterPoint_X_Int
+D=A
+@vecResult_vecNumMult_X_Int
+M=D
+@ccW_backFromVecNumMult1
+D=A
+@returner_vecNumMult
+M=D
+@vecNumMult
+0;JMP
+(ccW_backFromVecNumMult1)
+//summing the vector with Camera
+@ccW_InterPoint_X_Int
+D=A
+@vec1_sum_X_Int
+M=D
+@vecC_ccW_X_Int
+D=M
+@vec2_sum_X_Int
+M=D
+@ccW_InterPoint_X_Int
+D=A
+@vecResult_sum_X_Int
+M=D
+@ccW_backFromVecSum1
+D=A
+@returner_vecSum
+M=D
+@vecSum
+0;JMP
+(ccW_backFromVecSum1)
+//check if point is on segment
+@ccW_InterPoint_X_Int
+D=A
+@vecP_scP_X_Int
+M=D
+@ccW_wallPointer//no mistake, i need M, and it points at M
+D=M
+@vecM_scP_X_Int
+M=D
+@4
+D=A
+@ccW_wallPointer
+MD=M+D
+@vecH_scP_X_Int
+M=D
+@ccW_backFromScP1
+D=A
+@returner_scP
+M=D
+@segmentContainsPoint
+0;JMP
+(ccW_backFromScP1)
+@result_scP
+D=M
+@ccW_mainCycle_continue2//dismiss if not contains
+D;JLT
+//here if segment contains the point
+//compare to previously found one
+//new should be smaller, otherwise dismiss
+@result_ccW_t_Int
+D=M
+@num1Int_minus
+M=D
+@result_ccW_t_Frac
+D=M
+@num1Frac_minus
+M=D
+@resultInt_lbInter
+D=M
+@num2Int_minus
+M=D
+@resultFrac_lbInter
+D=M
+@num2Frac_minus
+M=D
+@ccW_backFromMinus1
+D=A
+@returner_minus
+M=D
+@floatMinus
+0;JMP
+(ccW_backFromMinus1)
+@resultInt_minus
+D=M
+@ccW_mainCycle_continue2
+D;JLT//dismiss if old - new < 0
+//here if old >= new
+@resultInt_lbInter
+D=M
+@result_ccW_t_Int
+M=D
+@resultFrac_lbInter
+D=M
+@result_ccW_t_Frac
+M=D
+@4
+D=A
+@ccW_wallPointer
+MD=M+D
+A=D
+D=M
+@result_ccW_type
+M=D
+@ccW_mainCycle_continue3
+0;JMP
+//step end
+(ccW_mainCycle_continue1)//not read H
+@4
+D=A
+@ccW_wallPointer
+M=M+D
+(ccW_mainCycle_continue2)//not read type
+@4
+D=A
+@ccW_wallPointer
+M=M+D
+(ccW_mainCycle_continue3)//read type
+@ccW_wallPointer
+M=M+1
+//check condition for ccW_mainCycle
+@ccW_iterCount
+D=M
+@ccW_mainCycle
+D;JGT
+//ccW_mainCycle end
+//modify result if it is too far
+@ccW_visibleDistanceT
+D=M
+@result_ccW_t_Int
+D=M-D
+@ccW_returnToOrigin
+D;JLE
+@result_ccW_t_Int
+M=-1
+@result_ccW_t_Frac
+M=0
+(ccW_returnToOrigin)
+@returner_ccW
+A=M
+0;JMP
+
+
+
+
+
 
 
 
@@ -392,19 +1203,6 @@ A=M
 (segmentContainsPoint)
 @result_scP
 M=-1
-//copy addresses
-@vecP_scP_X_Int
-D=M
-@scP_P_pointer
-M=D
-@vecM_scP_X_Int
-D=M
-@scP_M_pointer
-M=D
-@vecH_scP_X_Int
-D=M
-@scp_H_pointer
-M=D
 //calc intermidiate vectors
 //scP_vec1_X_Int = P-M
 @vecP_scP_X_Int
@@ -1232,7 +2030,6 @@ D=!A
 @resultInt_divF
 M=M-D
 (divF_nextStep)//here resultInt_divF is Ok with sign
-@12345
 @remainsSmal//alvays not negative here
 D=M
 @num1Big_div
