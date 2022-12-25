@@ -23,3 +23,20 @@ M=D
 0;JMP
 ({})
 //example end
+
+@vecB_lbInter_X_Int
+D=M
+@lbInter_vecBpos
+M=D
+@vecC_lbInter_X_Int
+D=M
+@lbInter_pointCpos
+M=D
+@vecM_lbInter_X_Int
+D=M
+@lbInter_pointMpos
+M=D
+@vecN_lbInter_X_Int
+D=M
+@lbInter_vecNpos
+M=D

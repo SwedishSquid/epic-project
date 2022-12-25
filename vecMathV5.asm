@@ -1,19 +1,38 @@
 //place here variabels that needs to be monitored
-@vec2Xi//result of multiplication in here
-@vec2Xf
-@vec2Yi
-@vec2Yf
+@result_scP
 
-@num1Int
-@num1Frac
+@resultInt_lbInter
+@resultFrac_lbInter
 
-@vec1Xi
-@vec1Xf
-@vec1Yi
-@vec1Yf
+@pointToCheck_X_Int
+@pointToCheck_X_Frac
+@pointToCheck_Y_Int
+@pointToCheck_Y_Frac
 
+@P_X_Int
+@P_X_Frac
+@P_Y_Int
+@P_Y_Frac
 
+@N_X_Int
+@N_X_Frac
+@N_Y_Int
+@N_Y_Frac
 
+@M_X_Int
+@M_X_Frac
+@M_Y_Int
+@M_Y_Frac
+
+@C_X_Int
+@C_X_Frac
+@C_Y_Int
+@C_Y_Frac
+
+@H_X_Int
+@H_X_Frac
+@H_Y_Int
+@H_Y_Frac
 
 //calling the initializer
 //do not touch please - useful thing
@@ -27,68 +46,204 @@ M=D
 
 //example
 
-@99
+@1
 D=A
-@vec1Xi
+@P_X_Int
 M=D
 @0
 D=A
-@vec1Xf
+@P_X_Frac
 M=D
-@33
+@2
 D=A
-@vec1Yi
+@P_Y_Int
 M=D
 @0
 D=A
-@vec1Yf
+@P_Y_Frac
 M=D
 
+@1
+D=A
+@N_X_Int
+M=D
 @0
 D=A
-@num1Int
+@N_X_Frac
 M=D
-@10923
+@4
+D=-A
+@N_Y_Int
+M=D
+@0
 D=A
-@num1Frac
+@N_Y_Frac
+M=D
+
+@13
+D=A
+@M_X_Int
+M=D
+@0
+D=A
+@M_X_Frac
+M=D
+@8
+D=A
+@M_Y_Int
+M=D
+@0
+D=A
+@M_Y_Frac
+M=D
+
+@4
+D=A
+@C_X_Int
+M=D
+@0
+D=A
+@C_X_Frac
+M=D
+@1
+D=A
+@C_Y_Int
+M=D
+@0
+D=A
+@C_Y_Frac
 M=D
 
 
 
-@vec1Xi//call vecNumMult
+
+
+
+
+@P_X_Int//call lbInter
+D=A
+@vecB_lbInter_X_Int
+M=D
+
+@N_X_Int
+D=A
+@vecN_lbInter_X_Int
+M=D
+
+@M_X_Int
+D=A
+@vecM_lbInter_X_Int
+M=D
+
+@C_X_Int
+D=A
+@vecC_lbInter_X_Int
+M=D
+
+
+@example_backFromLbInter1
+D=A
+@returner_lbInter
+M=D
+@lineBeamIntersection
+0;JMP
+(example_backFromLbInter1)
+
+
+
+
+@1
+D=A
+@H_X_Int
+M=D
+@0
+D=A
+@H_X_Frac
+M=D
+@5
+D=A
+@H_Y_Int
+M=D
+@0
+D=A
+@H_Y_Frac
+M=D
+
+
+//mult p
+@P_X_Int
 D=A
 @vec_vecNumMult_X_Int
 M=D
-@num1Int
+@resultInt_lbInter
 D=M
 @numInt_vecNumMult
 M=D
-@num1Frac
+@resultFrac_lbInter
 D=M
 @numFrac_vecNumMult
 M=D
-@vec2Xi
+@pointToCheck_X_Int
 D=A
 @vecResult_vecNumMult_X_Int
 M=D
-
-@END
+@example_backFromVecNumMult1
 D=A
 @returner_vecNumMult
 M=D
 @vecNumMult
 0;JMP
+(example_backFromVecNumMult1)
+
+
+//summing with C
+@C_X_Int
+D=A
+@vec1_sum_X_Int
+M=D
+@pointToCheck_X_Int
+D=A
+@vec2_sum_X_Int
+M=D
+@pointToCheck_X_Int
+D=A
+@vecResult_sum_X_Int
+M=D
+@example_backFromVecSum1
+D=A
+@returner_vecSum
+M=D
+@vecSum
+0;JMP
+(example_backFromVecSum1)
+
+
+//call scP
+@pointToCheck_X_Int
+D=A
+@vecP_scP_X_Int
+M=D
+@M_X_Int
+D=A
+@vecM_scP_X_Int
+M=D
+@H_X_Int
+D=A
+@vecH_scP_X_Int
+M=D
+@example_backFromScP1
+D=A
+@returner_scP
+M=D
+@segmentContainsPoint
+0;JMP
+(example_backFromScP1)
+
 (END)
 @END
 0;JMP
 
 //example
-
-
-
-
-
-//all mathematics below
 
 
 
@@ -198,9 +353,294 @@ D=M+D
 @vecNM_storage_X_Int
 @vecNM_storage_X_Frac
 
+
+
+
+//linear-algebra-methods storage initialization
+//lineBeamIntersection
+@lbInter_vecK_X_Int
+@lbInter_vecK_X_Frac
+@lbInter_vecK_Y_Int
+@lbInter_vecK_Y_Frac
+//segmentContainsPoint
+@scP_vec1_X_Int
+@scP_vec1_X_Frac
+@scP_vec1_Y_Int
+@scP_vec1_Y_Frac
+@scP_vec2_X_Int
+@scP_vec2_X_Frac
+@scP_vec2_Y_Int
+@scP_vec2_Y_Frac
+
+
+
 @returner_init
 A=M
 0;JMP
+
+
+
+
+
+
+
+//gets 'vecP_scP_X_Int' as point to check
+//gets 'vecM_scP_X_Int' as edge-point of segment
+//gets 'vecH_scP_X_Int' as other edge-point of segment
+//result is 'result_scP': 1 if true; -1 if false
+//place to return after the program is 'returner_scP'
+(segmentContainsPoint)
+@result_scP
+M=-1
+//copy addresses
+@vecP_scP_X_Int
+D=M
+@scP_P_pointer
+M=D
+@vecM_scP_X_Int
+D=M
+@scP_M_pointer
+M=D
+@vecH_scP_X_Int
+D=M
+@scp_H_pointer
+M=D
+//calc intermidiate vectors
+//scP_vec1_X_Int = P-M
+@vecP_scP_X_Int
+D=M
+@vec1_subs_X_Int
+M=D
+@vecM_scP_X_Int
+D=M
+@vec2_subs_X_Int
+M=D
+@scP_vec1_X_Int
+D=A
+@vecResult_subs_X_Int
+M=D
+@scP_backFromVecSubs1
+D=A
+@returner_vecSubs
+M=D
+@vecSubs
+0;JMP
+(scP_backFromVecSubs1)
+//scP_vec2_X_Int = P-H
+@vecP_scP_X_Int
+D=M
+@vec1_subs_X_Int
+M=D
+@vecH_scP_X_Int
+D=M
+@vec2_subs_X_Int
+M=D
+@scP_vec2_X_Int
+D=A
+@vecResult_subs_X_Int
+M=D
+@scP_backFromVecSubs2
+D=A
+@returner_vecSubs
+M=D
+@vecSubs
+0;JMP
+(scP_backFromVecSubs2)
+//compare signs of vectors
+//compare X
+@scP_sign
+M=0
+@32767
+D=!A
+@scP_vec1_X_Int
+D=M&D
+@scP_sign
+M=D
+@32767
+D=!A
+@scP_vec2_X_Int
+D=M&D
+@scP_sign
+D=M+D
+@scP_checkY
+D;JEQ
+@result_scP//here if ok
+M=1
+@scP_return//goto return
+0;JMP
+(scP_checkY)
+//here if need to check Y
+@scP_sign
+M=0
+@32767
+D=!A
+@scP_vec1_Y_Int
+D=M&D
+@scP_sign
+M=D
+@32767
+D=!A
+@scP_vec2_Y_Int
+D=M&D
+@scP_sign
+D=M+D
+@scP_return
+D;JEQ
+@result_scP//here if ok
+M=1
+(scP_return)
+//goto origin
+@returner_scP
+A=M
+0;JMP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//gets 'vecB_lbInter_X_Int' as vector of the Beam
+//gets 'vecC_lbInter_X_Int' as point of Camera: "start of beam"
+//gets 'vecM_lbInter_X_Int' as point of Line: "any point"
+//gets 'vecN_lbInter_X_Int' as normal to Line
+//results in 'resultInt_lbInter' and 'resultFrac_lbInter'
+//place to return after the program is 'returner_lbInter'
+(lineBeamIntersection)
+@resultInt_lbInter
+@resultFrac_lbInter
+//count K
+@vecC_lbInter_X_Int
+D=M
+@vec1_subs_X_Int
+M=D
+@vecM_lbInter_X_Int
+D=M
+@vec2_subs_X_Int
+M=D
+@lbInter_vecK_X_Int//plug in out_vector pointer
+D=A
+@vecResult_subs_X_Int
+M=D
+@lbInter_backFromVecSubs1
+D=A
+@returner_vecSubs
+M=D
+@vecSubs
+0;JMP
+(lbInter_backFromVecSubs1)
+//actuall counting
+//count N dot K
+@vecN_lbInter_X_Int
+D=M
+@vec1_scal_X_Int
+M=D
+@lbInter_vecK_X_Int
+D=A
+@vec2_scal_X_Int
+M=D
+@lbInter_backFromScalMult1
+D=A
+@returner_scal
+M=D
+@scalarMult
+0;JMP
+(lbInter_backFromScalMult1)
+//plug results into floatDiv
+@resultInt_scal
+D=M
+@num1Int_divF
+M=D
+@resultFrac_scal
+D=M
+@num1Frac_divF
+M=D
+//count N dot B
+@vecN_lbInter_X_Int
+D=M
+@vec1_scal_X_Int
+M=D
+@vecB_lbInter_X_Int
+D=M
+@vec2_scal_X_Int
+M=D
+@lbInter_backFromScalMult2
+D=A
+@returner_scal
+M=D
+@scalarMult
+0;JMP
+(lbInter_backFromScalMult2)
+//plug results into floatDiv again
+@resultInt_scal
+D=M
+@num2Smal_divF//not a mistake, this is how it works
+M=D
+@num2Big_divF//loss of accuracy, yes. did not manage to implement float div
+M=0
+@lbInter_backFromDivF1
+D=A
+@returner_divFloat
+M=D
+@floatDiv
+0;JMP
+(lbInter_backFromDivF1)
+//put results in floatMinus
+@resultInt_divF
+D=M
+@num2Int_minus
+M=D
+@resultFrac_divF
+D=M
+@num2Frac_minus
+M=D
+@num1Int_minus
+M=0
+@num1Frac_minus
+M=0
+@lbInter_backFromMinus1
+D=A
+@returner_minus
+M=D
+@floatMinus
+0;JMP
+(lbInter_backFromMinus1)
+@resultInt_minus
+D=M
+@resultInt_lbInter
+M=D
+@resultFrac_minus
+D=M
+@resultFrac_lbInter
+M=D
+//goto origin
+@returner_lbInter
+A=M
+0;JMP
+
+
+
+
+
+
+
+//all mathematics below
+
+
+
+
+
+
+
 
 
 
